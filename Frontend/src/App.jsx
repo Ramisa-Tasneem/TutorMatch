@@ -1,15 +1,16 @@
-import React from 'react';
-import TestConnection from './TestConnection.jsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
 
 
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-console.log("App component loaded");
-
-const App = () => (
-  <div>
-    <TestConnection />
-    <p>Hello world</p>
-  </div>
-);
+      </Routes>
+    </Router>
+  );
+}
 
 export default App;
