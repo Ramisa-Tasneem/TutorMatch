@@ -7,26 +7,61 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
-  background: white;
-  border-bottom: 1px solid #ddd;
+  align-items: center;
+  padding: 1rem 2rem; /* Adjust padding as needed */
+  background-color: #ffffff; /* Add a background color if needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for separation */
+  margin-bottom: 20px; /* Adjust this value to control the space below the navbar */
+  border-bottom: 1px solid #ccc; /* Optional: Adds a line below the navbar */
+}
+
+.logo img {
+  height: 50px; /* Adjust logo height as needed */
+}
+
+.buttons {
+  display: flex;
+  gap: 20px; /* Space between navigation buttons */
 }
 
 .nav-btn {
-  padding: 10px 20px;
-  margin: 0 10px;
-  background: #333;
-  color: white;
   text-decoration: none;
-  border-radius: 5px;
+  color: #333; /* Button text color */
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem; /* Adjust padding for button size */
+  border-radius: 5px; /* Optional: Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-btn:hover {
+  background-color: #f0f0f0; /* Hover background color */
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: #333; /* Button text color */
+  font-size: 1.1rem; /* Increase font size */
+  font-weight: 600; /* Make text bolder */
+  font-family: 'Arial', sans-serif; /* Change font family */
+  padding: 0.5rem 1rem; /* Adjust padding for button size */
+  border-radius: 5px; /* Optional: Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  text-transform: uppercase; /* Optional: Convert text to uppercase */
+  letter-spacing: 1px; /* Optional: Add spacing between letters */
 }
 
 .banner {
-  text-align: center;
-  padding: 50px;
+  background-image: url('/banner-image.jpg');
   background-size: cover;
   background-position: center;
+  height: 400px; /* New height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: white;
+  text-align: center;
 }
 
 .search-container {
