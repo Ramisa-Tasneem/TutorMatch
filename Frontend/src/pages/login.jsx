@@ -7,10 +7,10 @@ const Login = () => {
         <div className='wrapper'>
             <form action="" >
                 <h1>Login</h1>
-                <div className="input_box">
+                <div className="input-box">
                     <input type="text" placeholder='Username'required/>
                 </div>
-                <div className="input_box">
+                <div className="input-box">
                     <input type="password" placeholder='Password'required/>
                 </div>
            <button type="submit" >Login</button>
