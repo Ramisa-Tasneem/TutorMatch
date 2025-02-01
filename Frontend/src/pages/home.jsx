@@ -3,7 +3,7 @@ import Footer from "../components/footer";
 
 const Home = () => {
     const featuredtuition = [
-        { title: "English", location: "Bansree", type: "Remote", salary: "2k" },
+        { title: "HAHAHIHI", location: "Goran", type: "Remote", salary: "2k" },
         { title: "Bangla", location: "Gulshan", type: "Remote", salary: "2k" },
         { title: "Arabic", location: "Bannai", type: "Remote", salary: "20k" },
         { title: "Biology", location: "Demra", type: "Remote", salary: "5k" },
@@ -55,8 +55,12 @@ const Home = () => {
                             <p>Location: {tuition.location}</p>
                             <p>Type: {tuition.type}</p>
                             <p>Salary: {tuition.salary}</p>
-                            <button>Details</button>
-                            <button>Apply now</button>
+                            <button style={{ backgroundColor: "#3498db", color: "white", padding: "10px", border: "none", borderRadius: "5px", cursor: "pointer", transition: "background-color 0.3s" }}
+                                onMouseOver={(e) => e.target.style.backgroundColor = "#bb8fce"}
+                                onMouseOut={(e) => e.target.style.backgroundColor = "#3498db"}>Details</button>
+                            <button style={{ backgroundColor: "#27ae60", color: "white", padding: "10px", border: "none", borderRadius: "5px", cursor: "pointer", marginLeft: "10px", transition: "background-color 0.3s" }}
+                                onMouseOver={(e) => e.target.style.backgroundColor = "#219150"}
+                                onMouseOut={(e) => e.target.style.backgroundColor = "#27ae60"}>Apply now</button>
                         </div>
                     ))}
                 </div>
@@ -71,8 +75,12 @@ const Home = () => {
                             <p>Location: {tuition.location}</p>
                             <p>Type: {tuition.type}</p>
                             <p>Salary: {tuition.salary}</p>
-                            <button>Details</button>
-                            <button>Apply now</button>
+                            <button style={{ backgroundColor: "#3498db", color: "white", padding: "10px", border: "none", borderRadius: "5px", cursor: "pointer", transition: "background-color 0.3s" }}
+                                onMouseOver={(e) => e.target.style.backgroundColor = "#bb8fce"}
+                                onMouseOut={(e) => e.target.style.backgroundColor = "#3498db"}>Details</button>
+                            <button style={{ backgroundColor: "#27ae60", color: "white", padding: "10px", border: "none", borderRadius: "5px", cursor: "pointer", marginLeft: "10px", transition: "background-color 0.3s" }}
+                                onMouseOver={(e) => e.target.style.backgroundColor = "#219150"}
+                                onMouseOut={(e) => e.target.style.backgroundColor = "#27ae60"}>Apply now</button>
                         </div>
                     ))}
                 </div>
