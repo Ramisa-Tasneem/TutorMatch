@@ -2,32 +2,29 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #B0C4DE; /* Light purple background */
+  background-color: #B0C4DE; 
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem; /* Adjust padding as needed */
-  background: linear-gradient(to right, #a534a9, #e2a2e3); /* Gradient from darker to lighter color */
+  padding: 1rem 2rem; 
+  background: linear-gradient(to right, #a534a9, #e2a2e3); 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* Adjust this value to control the space below the navbar */
-  border-bottom: 1px solid #ccc; /* Optional: Adds a line below the navbar */
+  margin-bottom: 20px; 
+  border-bottom: 1px solid #ccc; 
 }
 
-/* Logo on the left */
 .logo img {
-  height: 50px; /* Adjust based on your logo */
+  height: 50px; 
 }
 
-/* Center navigation links */
 .nav-links {
   display: flex;
   gap: 30px;
   flex-grow: 1;
-  justify-content: center; /* Centering links */
+  justify-content: center; 
 }
 
 .nav-btn {
@@ -40,10 +37,9 @@ body {
 }
 
 .nav-btn:hover {
-  color: #ff758c; /* Gold on hover */
+  color: #ff758c; 
 }
 
-/* Right side - Auth Buttons */
 .auth-buttons {
   display: flex;
   gap: 10px;
@@ -65,18 +61,16 @@ body {
 
 .auth-btn:hover {
   background: white;
-  color: #c71585; /* Pink on hover */
+  color: #c71585; 
 }
 
-/* Icons */
 .icon {
   font-size: 14px;
 }
 
-/* Banner */
 .banner {
   position: relative;
-  height: 470px; /* Adjust the height as needed */
+  height: 470px; 
   background-image: url('/images/banner.jpg');
   background-size: cover;
   background-position: center;
@@ -86,26 +80,24 @@ body {
   justify-content: center;
   text-align: center;
   color: white;
-  top: -20px; /* Ensure the banner starts right below the navbar */
+  top: -20px; 
 }
 
 .banner2-image {
   position: absolute;
-  top: 52%; /* Adjust vertical positioning */
+  top: 52%;
   left: 80%;
   transform: translate(-50%, -50%);
-  width: 420px; /* Adjust size */
+  width: 420px; 
   height: auto;
   animation: floatUpDown 2s infinite alternate ease-in-out;
 }
 
-/* Hover Effect */
 .overlay-image:hover {
   animation: none;
   transform: translate(-50%, -60%);
 }
 
-/* Floating Animation */
 @keyframes floatUpDown {
   0% {
     transform: translate(-50%, -50%);
@@ -115,22 +107,20 @@ body {
   }
 }
 
-/* Main Heading */
 .main-heading {
   position: absolute;
-  top: 55px; /* Adjust the vertical position */
-  left: 50px; /* Adjust the horizontal position */
+  top: 55px;
+  left: 50px;
   font-family: 'Arial', sans-serif;
   font-size: 40px;
   color: #0E4C92;
   text-align: left;
 }
 
-/* Sub Heading */
 .sub-heading {
   position: absolute;
-  top: 155px; /* Adjust the vertical position */
-  left: 50px; /* Adjust the horizontal position */
+  top: 155px; 
+  left: 50px; 
   font-family: 'Helvetica', sans-serif;
   font-size: 30px;
   color: #9f9393;
@@ -138,22 +128,21 @@ body {
 }
 
 .location-icon {
-  color: red; /* Change the color to fit your design */
-  font-size: 28px; /* Adjust the size of the icon */
-  margin-right: 0px; /* Space between the icon and text */
-  vertical-align: middle; /* Align icon with text */
+  color: red; 
+  font-size: 28px; 
+  margin-right: 0px; 
+  vertical-align: middle;
 }
 
-/* Find Tutor Button */
 .find-tutor-btn {
   position: relative;
-  font-size: 30px; /* Adjust font size */
+  font-size: 30px; 
   font-weight: bold;
-  position: absolute; /* Position it freely */
-  left: 120px; /* Adjust left position */
+  position: absolute;
+  left: 120px;
   top: 60%;
-  color: white; /* Initial text color */
-  background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a88); /* Gradient color */
+  color: white;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a88); 
   padding: 14px 27px;
   border: none;
   border-radius: 8px;
@@ -168,10 +157,9 @@ body {
 }
 
 .find-tutor-btn:hover .arrow-icon {
-  transform: translateX(5px); /* Move the arrow slightly on hover */
+  transform: translateX(5px);
 }
 
-/* Continuous wave animation effect */
 .find-tutor-btn::before {
   content: "";
   position: absolute;
@@ -181,7 +169,7 @@ body {
   height: 100%;
   background: rgba(255, 255, 255, 0.3);
   transform: skewX(-30deg);
-  animation: waveAnimation 1.5s linear infinite; /* Continuous animation */
+  animation: waveAnimation 1.5s linear infinite; 
 }
 
 @keyframes waveAnimation {
@@ -193,12 +181,10 @@ body {
   }
 }
 
-/* Change background color only on hover */
 .find-tutor-btn:hover {
   background: linear-gradient(90deg, #ff6a88, #ff758c, #ff7eb3);
 }
 
-/* Search Tuition Section */
 .search-tuition {
   text-align: center;
   margin-top: 50px;
@@ -215,7 +201,6 @@ body {
   color: #0a0a0a;
 }
 
-/* Layout for the search container */
 .search-container {
   display: flex;
   align-items: center;
@@ -224,7 +209,6 @@ body {
   margin-top: 30px;
 }
 
-/* Left side - moving image */
 .search-left {
   width: 40%;
 }
@@ -234,10 +218,9 @@ body {
   height: 350px;
   max-width: 100%;
   animation: moveUpDown 2s infinite alternate ease-in-out;
-  margin-left: -150px; /* Moves it to the left */
+  margin-left: -150px; 
 }
 
-/* Moving animation */
 @keyframes moveUpDown {
   0% {
     transform: translateY(0);
@@ -247,7 +230,6 @@ body {
   }
 }
 
-/* Right side - text section */
 .search-right {
   width: 40%;
   text-align: left;
@@ -265,12 +247,11 @@ body {
   margin-top: 10px;
 }
 
-/* Search Tuition Button */
 .search-tuition-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #3498db; /* Initial Blue */
+  background-color: #3498db;
   color: white;
   padding: 25px;
   font-size: 20px;
@@ -279,27 +260,25 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  margin: 0 auto; /* Centers it horizontally */
+  margin: 0 auto; 
   position: relative;
 }
 
 .search-tuition-btn:hover {
-  background-color: #2980b9; /* Darker Blue */
-  box-shadow: 0 0 25px 10px rgba(192, 192, 192, 1); /* Strong Silver Glow */
+  background-color: #2980b9;
+  box-shadow: 0 0 25px 10px rgba(192, 192, 192, 1);
 }
 
-
-/* Tuition Types Section */
 .tuition-types {
   display: flex;
   justify-content: center;
-  gap: 7%; /* Adjust gap proportionally */
+  gap: 7%; 
   margin-top: 70px;
 }
 
 .tuition-type-img {
-  width: 60%; /* Each image takes 30% of the container */
-  max-width: 350px; /* Limit max size */
+  width: 60%; 
+  max-width: 350px; 
   border-radius: 20px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
@@ -307,27 +286,25 @@ body {
 
 .tuition-type-img:active,
 .tuition-type-img:hover {
-  transform: translateY(-10px); /* Hover and Click Effect - Move Up */
+  transform: translateY(-10px); 
 }
 
 .image-section h2 {
-  font-size: 26px; /* Bigger for emphasis */
-  font-weight: 700; /* Bold */
-  color: #0a0a0a; /* Blueish tone */
+  font-size: 26px;
+  font-weight: 700;
+  color: #0a0a0a;
   margin-bottom: 5px;
-  letter-spacing: 1px; /* Slight spacing for better readability */
+  letter-spacing: 1px;
 }
 
-/* Subheading */
 .image-section p {
-  font-size: 18px; /* Slightly smaller than heading */
-  font-weight: 400; /* Regular weight */
-  color: #0a0a0a; /* Ash color */
+  font-size: 18px;
+  font-weight: 400;
+  color: #0a0a0a;
   margin-bottom: 20px;
-  line-height: 1.5; /* Better spacing between lines */
+  line-height: 1.5;
 }
 
-/* Categories, Featured, and Latest Tuition Sections */
 .categories,
 .featured-tuition,
 .latest-tuition {
@@ -349,26 +326,23 @@ body {
   margin: 10px;
   width: 250px;
   text-align: center;
-  background: white; /* Ensuring the background is white */
+  background: white;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
-/* Tuition Card Hover Effect */
 .tuition-card:hover {
   transform: scale(1.05);
 }
 
-/* Button Container for alignment */
 .button-container {
   display: flex;
-  justify-content: space-between; /* Left and right alignment */
-  margin-top: 15px; /* Optional: You can adjust top margin as needed */
+  justify-content: space-between;
+  margin-top: 15px;
 }
 
-/* Details Button */
 .details-btn {
-  background-color: #Ba6E8F; /* Ash background */
+  background-color: #Ba6E8F;
   color: white;
   padding: 10px 20px;
   font-size: 14px;
@@ -379,15 +353,13 @@ body {
 }
 
 .details-btn:hover {
-  background-color:  #b98fa1; /* Ash background */
-
+  background-color:  #b98fa1;
   font-size: 16px;
   transform: scale(1.05);
 }
 
-/* Apply Button */
 .apply-btn {
-  background-color: #9a57af; /* Blue background */
+  background-color: #9a57af;
   color: white;
   padding: 10px 20px;
   font-size: 14px;
@@ -398,13 +370,11 @@ body {
 }
 
 .apply-btn:hover {
-  background-color: #c89dd5; /* Darker blue on hover */
+  background-color: #c89dd5;
   font-size: 16px;
   transform: scale(1.05);
 }
 
-
-/* Footer */
 footer {
   text-align: center;
   padding: 10px;
