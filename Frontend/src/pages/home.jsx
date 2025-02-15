@@ -1,14 +1,16 @@
+import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import { FaMapMarkerAlt, FaArrowRight } from "react-icons/fa";
 
 const Home = () => {
-    const featuredtuition = [
-        { title: "HAHAHIHI", location: "Goran", type: "Remote", salary: "2k" },
-        { title: "Bangla", location: "Gulshan", type: "Remote", salary: "2k" },
-        { title: "Arabic", location: "Bannai", type: "Remote", salary: "20k" },
-        { title: "Biology", location: "Demra", type: "Remote", salary: "5k" },
-        { title: "Physics", location: "Khilgaon", type: "Remote", salary: "2k" },
-        { title: "Higher Math", location: "Uttara", type: "Remote", salary: "8k" },
+    const featuredTuition = [
+        { title: "Economics", location: "Goran", type: "Online", salary: "4k" },
+        { title: "Bangla", location: "Gulshan", type: "Offline", salary: "6k" },
+        { title: "Arabic", location: "Bannai", type: "Offline", salary: "2k" },
+        { title: "Biology", location: "Demra", type: "Online", salary: "4k" },
+        { title: "Physics", location: "Khilgaon", type: "Group", salary: "5k" },
+        { title: "Higher Math", location: "Uttara", type: "Group", salary: "8k" },
     ];
 
     const categories = [
@@ -23,44 +25,65 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <header className="banner" style={{ backgroundImage: 'url(/images/banner.jpg)' }}>
-                <h1>Find your Tuition</h1>
-                <p>Thousands of Tuition available.</p>
-                <button>Explore Now</button>
-                <div className="search-container">
-                    <input type="text" placeholder="Keywords" />
-                    <input type="text" placeholder="Location" />
-                    <button>Search</button>
-                </div>
+            <header className="banner">
+                <div className="banner-image"></div>
+                <img src="/images/banner2.jpg" alt="Banner" className="banner2-image" />
+                <h1 className="main-heading">Best Tutoring Platform <br /> for Home & Online Tuitions</h1>
+                <p className="sub-heading">
+                    <FaMapMarkerAlt className="location-icon" /> Find the Right Tutor in Your Area
+                </p>
+                <button className="find-tutor-btn">
+                    Find a Tutor <FaArrowRight className="arrow-icon" />
+                </button>
             </header>
 
-            <section className="categories">
-                <h2>Popular Subjects</h2>
-                <div className="category-list">
-                    {categories.map((category, index) => (
-                        <div key={index} className="category-card">
-                            <h3>{category.name}</h3>
-                            <p>{category.count} Available</p>
-                        </div>
-                    ))}
+            <section className="search-tuition">
+                <h2 className="search-heading">Search Tuitions</h2>
+                <p className="search-subheading">Find tuition near your preferred area</p>
+                <div className="search-container">
+                    <div className="search-left">
+                        <img src="/images/moving-image.jpg" alt="Moving" className="moving-image" />
+                    </div>
+                    <div className="search-right">
+                        <h3 className="right-subheading">Looking for interesting tuition jobs to excel in your teaching experience?</h3>
+                        <p className="right-text">
+                            If teaching jobs interest you, then you are in the right place. Here, we often have 100+ open home tuition jobs that are genuine and 100% verified. Whether you are starting your career as a tuition teacher or an expert in your field, we can help you find your next tuition. You can search and apply to the tuition jobs that best fit your skills, preferred location, class, and subjects.
+                        </p>
+                        <button className="search-tuition-btn">
+                            Search <FaArrowRight className="arrow-icon" />
+                        </button>
+                    </div>
                 </div>
+
+                <div className="image-section">
+                     <h2><br></br>Tuition Types</h2>
+                     <p>Find the Best Tuition Type which Suits You Most</p>
+               </div>
+                
+                
+                
+                
+                
+                
+                <div className="tuition-types">
+        <img src="/images/type1.png" alt="Type 1" className="tuition-type-img" />
+        <img src="/images/type2.png" alt="Type 2" className="tuition-type-img" />
+        <img src="/images/type3.png" alt="Type 3" className="tuition-type-img" />
+    </div>
             </section>
+         
 
             <section className="featured-tuition">
-                <h2>Featured Tuition</h2>
+                <h2><br></br>Featured Tuition</h2>
                 <div className="tuition-list">
-                    {featuredtuition.map((tuition, index) => (
+                    {featuredTuition.map((tuition, index) => (
                         <div key={index} className="tuition-card">
                             <h3>{tuition.title}</h3>
                             <p>Location: {tuition.location}</p>
                             <p>Type: {tuition.type}</p>
                             <p>Salary: {tuition.salary}</p>
-                            <button style={{ backgroundColor: "#3498db", color: "white", padding: "10px", border: "none", borderRadius: "5px", cursor: "pointer", transition: "background-color 0.3s" }}
-                                onMouseOver={(e) => e.target.style.backgroundColor = "#bb8fce"}
-                                onMouseOut={(e) => e.target.style.backgroundColor = "#3498db"}>Details</button>
-                            <button style={{ backgroundColor: "#27ae60", color: "white", padding: "10px", border: "none", borderRadius: "5px", cursor: "pointer", marginLeft: "10px", transition: "background-color 0.3s" }}
-                                onMouseOver={(e) => e.target.style.backgroundColor = "#219150"}
-                                onMouseOut={(e) => e.target.style.backgroundColor = "#27ae60"}>Apply now</button>
+                            <button className="details-btn">Details</button>
+                            <button className="apply-btn">Apply now</button>
                         </div>
                     ))}
                 </div>
@@ -69,18 +92,14 @@ const Home = () => {
             <section className="latest-tuition">
                 <h2>Latest Tuition</h2>
                 <div className="tuition-list">
-                    {featuredtuition.map((tuition, index) => (
+                    {featuredTuition.map((tuition, index) => (
                         <div key={index} className="tuition-card">
                             <h3>{tuition.title}</h3>
                             <p>Location: {tuition.location}</p>
                             <p>Type: {tuition.type}</p>
                             <p>Salary: {tuition.salary}</p>
-                            <button style={{ backgroundColor: "#3498db", color: "white", padding: "10px", border: "none", borderRadius: "5px", cursor: "pointer", transition: "background-color 0.3s" }}
-                                onMouseOver={(e) => e.target.style.backgroundColor = "#bb8fce"}
-                                onMouseOut={(e) => e.target.style.backgroundColor = "#3498db"}>Details</button>
-                            <button style={{ backgroundColor: "#27ae60", color: "white", padding: "10px", border: "none", borderRadius: "5px", cursor: "pointer", marginLeft: "10px", transition: "background-color 0.3s" }}
-                                onMouseOver={(e) => e.target.style.backgroundColor = "#219150"}
-                                onMouseOut={(e) => e.target.style.backgroundColor = "#27ae60"}>Apply now</button>
+                            <button className="details-btn">Details</button>
+                            <button className="apply-btn">Apply now</button>
                         </div>
                     ))}
                 </div>
