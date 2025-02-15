@@ -7,12 +7,19 @@ use Illuminate\Http\Request;
 
 class TestMiddleware
 {
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
     public function handle(Request $request, Closure $next)
     {
-        if (!$request->input('token')) {
+        if (!$request->has('token')) {
             return response()->json([
-                'error' => 'Unauthorized access',
-                'message' => 'Message from TestMiddleware. You need to provide a token',
+                'error' => 'Unauthorized',
+                'message' => 'Message from TestMiddleware: You need to provide a valid token.',
             ], 401);
         }
 

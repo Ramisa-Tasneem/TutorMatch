@@ -1,0 +1,169 @@
+
+.profile-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-header h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+
+.profile-info {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.profile-info strong {
+  font-weight: bold;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+
+.logout-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #e43f3f;
+}
+
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+  border-radius: 0 0 8px 8px;
+}
+
+footer p {
+  margin: 0;
+} 
+
+
+
+  
+  .profile-container {
+    text-align: center;
+  }
+  
+  .profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: auto;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .edit-icon {
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .logout-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+ 
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .modal input {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+  }
+  
+  .modal-buttons button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .modal-buttons button:first-child {
+    background: gray;
+    color: white;
+  }
+  
+  .modal-buttons button:last-child {
+    background: blue;
+    color: white;
+  }
+  
+
