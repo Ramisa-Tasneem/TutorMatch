@@ -9,6 +9,7 @@ const Register = () => {
         name: "",
         email: "",
         password: "",
+        confirmPassword: "",
     });
 
     const [error, setError] = useState("");

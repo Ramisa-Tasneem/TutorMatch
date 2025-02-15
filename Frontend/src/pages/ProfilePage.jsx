@@ -1,7 +1,8 @@
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+
 import "/src/ProfilePage.css";
 
 const ProfilePage = () => {
@@ -57,9 +58,10 @@ const ProfilePage = () => {
           )}
         </div>
       </div>
-      <Footer />
+   
     </>
   );
 };
 
 export default ProfilePage;
+
