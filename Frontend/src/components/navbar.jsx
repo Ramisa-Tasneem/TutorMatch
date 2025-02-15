@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaSignInAlt, FaUserPlus } from "react-icons/fa";
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
             </div>
 
             <div className="nav-links">
-                <Link to="/Home" className="nav-btn">Home</Link>
+                <Link to="/" className="nav-btn">Home</Link>
                 <Link to="/about-tutors" className="nav-btn">About Tutors</Link>
                 <Link to="/tutor-request" className="nav-btn">TUTOR REQUEST</Link>
                 <Link to="/courses" className="nav-btn">COURSES</Link>

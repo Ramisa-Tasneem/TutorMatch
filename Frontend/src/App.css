@@ -90,9 +90,3 @@
   cursor: pointer;
 }
 
-body {
-  background-color: #d7bde2; /* Replace with your desired color */
-  margin: 10;
-  padding: 10;
-  min-height: 1000vh; /* Ensures the background covers the full viewport height */
-}
