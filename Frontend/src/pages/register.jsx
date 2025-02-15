@@ -1,6 +1,7 @@
-import { useState } from "react"; 
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "/src/login-register.css";
+import Navbar from "../components/navbar";
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -26,6 +27,7 @@ const Register = () => {
 
     return (
         <>
+            <Navbar />
             <div className="register-container">
                 <div className="register-image">
                     <img src="/images/register.jpg" alt="Register" />
