@@ -1,57 +1,67 @@
-import React, { useState } from "react";
-import "../ProfilePage.css";
+
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../components/navbar";
+
+import "/src/ProfilePage.css";
 
 const ProfilePage = () => {
-  const [name, setName] = useState("John Doe");
-  const [email] = useState("johndoe@example.com");
-  const [open, setOpen] = useState(false);
-  const [newName, setNewName] = useState(name);
+  const [user, setUser] = useState(null);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const handleEdit = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-  const handleSave = () => {
-    setName(newName);
-    handleClose();
-  };
+  
+  useEffect(() => {
+    const token = localStorage.getItem("token");
 
+    if (!token) {
+      navigate("/login"); 
+      return;
+    }
+
+    
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser) {
+      setUser(storedUser); 
+    } else {
+      setError("User data is missing.");
+    }
+  }, [navigate]);
+
+  
   const handleLogout = () => {
-    alert("Logged Out!");
-    // Add logout logic here
+    localStorage.removeItem("token"); 
+    localStorage.removeItem("user"); 
+    alert("Logged out successfully!");
+    navigate("/login");
   };
 
   return (
-    <div className="profile-container">
-      <div className="profile-card">
-        <img
-          src="https://via.placeholder.com/150"
-          alt="Profile"
-          className="profile-picture"
-        />
+    <>
+      <Navbar />
+      <div className="profile-container">
+        <div className="profile-header">
+          <h2>Profile</h2>
+        </div>
+
         <div className="profile-info">
-          <h2>{name} <span className="edit-icon" onClick={handleEdit}>✏️</span></h2>
-          <p>{email}</p>
-          <button className="logout-btn" onClick={handleLogout}>Logout</button>
+          {error ? (
+            <p className="error-message">{error}</p>
+          ) : user ? (
+            <>
+              <p><strong>Name:</strong> {user.name}</p>
+              <p><strong>Email:</strong> {user.email}</p>
+
+            </>
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
       </div>
-
-      {open && (
-        <div className="modal">
-          <div className="modal-content">
-            <h3>Edit Name</h3>
-            <input
-              type="text"
-              value={newName}
-              onChange={(e) => setNewName(e.target.value)}
-            />
-            <div className="modal-buttons">
-              <button onClick={handleClose}>Cancel</button>
-              <button onClick={handleSave}>Save</button>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
+   
+    </>
   );
 };
 
 export default ProfilePage;
+

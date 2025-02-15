@@ -2,6 +2,15 @@ import { Link } from "react-router-dom";
 import { FaSignInAlt, FaUserPlus } from "react-icons/fa";
 
 const Navbar = () => {
+    const navigate = useNavigate();
+    const token = localStorage.getItem("token");
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        alert("Logged Out!");
+        navigate("/login"); 
+    };
+
     return (
         <nav className="navbar">
             <div className="logo">
