@@ -8,7 +8,7 @@ const Navbar = () => {
     const handleLogout = () => {
         localStorage.removeItem("token");
         alert("Logged Out!");
-        navigate("/login"); 
+        navigate("/login");
     };
 
     return (
@@ -24,15 +24,21 @@ const Navbar = () => {
                 <Link to="/courses" className="nav-btn">COURSES</Link>
                 <Link to="/find-tutions" className="nav-btn">Find Tuition</Link>
                 <Link to="/post-tution" className="nav-btn">Post a Tuition</Link>
-            </div> 
+            </div>
 
             <div className="auth-buttons">
-                <Link to="/register" className="auth-btn">
-                    <FaUserPlus className="icon" /> Register
+                {token ? (<><Link to="/profile" className="auth-btn">
+                    <FaUserPlus className="icon" /> Profile
                 </Link>
-                <Link to="/login" className="auth-btn">  {/* ✅ FIXED: Properly closed */}
-                    <FaSignInAlt className="icon" /> Login
-                </Link>
+                    <button onClick={handleLogout} className="auth-btn">  {/* ✅ FIXED: Properly closed */}
+                        <FaSignInAlt className="icon" /> Logout
+                    </button></>) :
+                    (<><Link to="/register" className="auth-btn">
+                        <FaUserPlus className="icon" /> Register
+                    </Link>
+                        <Link to="/login" className="auth-btn">  {/* ✅ FIXED: Properly closed */}
+                            <FaSignInAlt className="icon" /> Login
+                        </Link></>)}
             </div>
         </nav>
     );
