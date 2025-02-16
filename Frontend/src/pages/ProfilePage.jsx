@@ -10,28 +10,30 @@ const ProfilePage = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  
+
   useEffect(() => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      navigate("/login"); 
+      navigate("/login");
       return;
     }
 
-    
+
     const storedUser = JSON.parse(localStorage.getItem("user"));
+
     if (storedUser) {
-      setUser(storedUser); 
+      setUser(storedUser);
     } else {
       setError("User data is missing.");
     }
   }, [navigate]);
+  const name = localStorage.getItem("name");
+  const email = localStorage.getItem("email");
 
-  
   const handleLogout = () => {
-    localStorage.removeItem("token"); 
-    localStorage.removeItem("user"); 
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     alert("Logged out successfully!");
     navigate("/login");
   };
@@ -49,8 +51,8 @@ const ProfilePage = () => {
             <p className="error-message">{error}</p>
           ) : user ? (
             <>
-              <p><strong>Name:</strong> {user.name}</p>
-              <p><strong>Email:</strong> {user.email}</p>
+              <p><strong>Name:</strong> {name}</p>
+              <p><strong>Email:</strong> {email}</p>
 
             </>
           ) : (
@@ -58,7 +60,7 @@ const ProfilePage = () => {
           )}
         </div>
       </div>
-   
+
     </>
   );
 };

@@ -37,6 +37,8 @@ const Login = () => {
             if (response.ok) {
                 console.log(" successful. Token:", data.access_token);
                 localStorage.setItem("token", data.access_token);
+                localStorage.setItem("name", data.user.name);
+                localStorage.setItem("email", data.user.email);
 
                 alert("Login Successful!");
                 navigate("/profile"); // Redirect to profile page
