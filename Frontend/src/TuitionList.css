@@ -1,0 +1,37 @@
+.tuition-list-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tuition-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tuition-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    width: 280px;
+    background-color: #f9f9f9;
+}
+
+.tuition-card h3 {
+    margin-top: 0;
+}
+
+.view-details-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.view-details-btn:hover {
+    background-color: #0056b3;
+}
