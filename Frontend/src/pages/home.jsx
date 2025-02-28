@@ -56,22 +56,16 @@ const Home = () => {
                 </div>
 
                 <div className="image-section">
-                     <h2><br></br>Tuition Types</h2>
-                     <p>Find the Best Tuition Type which Suits You Most</p>
-               </div>
-                
-                
-                
-                
-                
-                
+                    <h2><br></br>Tuition Types</h2>
+                    <p>Find the Best Tuition Type which Suits You Most</p>
+                </div>
                 <div className="tuition-types">
-        <img src="/images/type1.png" alt="Type 1" className="tuition-type-img" />
-        <img src="/images/type2.png" alt="Type 2" className="tuition-type-img" />
-        <img src="/images/type3.png" alt="Type 3" className="tuition-type-img" />
-    </div>
+                    <img src="/images/type1.png" alt="Type 1" className="tuition-type-img" />
+                    <img src="/images/type2.png" alt="Type 2" className="tuition-type-img" />
+                    <img src="/images/type3.png" alt="Type 3" className="tuition-type-img" />
+                </div>
             </section>
-         
+
 
             <section className="featured-tuition">
                 <h2><br></br>Featured Tuition</h2>
