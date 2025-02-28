@@ -93,7 +93,7 @@ body {
   top: 52%;
   left: 80%;
   transform: translate(-50%, -50%);
-  width: 420px; 
+  width: 370px; 
   height: auto;
   animation: floatUpDown 2s infinite alternate ease-in-out;
 }
