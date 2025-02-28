@@ -31,6 +31,37 @@ const Home = () => {
                 </button>
             </header>
 
+
+            <section className="search-tuition">
+                <h2 className="search-heading">Search Tuitions</h2>
+                <p className="search-subheading">Find tuition near your preferred area</p>
+                <div className="search-container">
+                    <div className="search-left">
+                        <img src="/images/moving-image.jpg" alt="Moving" className="moving-image" />
+                    </div>
+                    <div className="search-right">
+                        <h3 className="right-subheading">Looking for interesting tuition jobs to excel in your teaching experience?</h3>
+                        <p className="right-text">
+                            If teaching jobs interest you, then you are in the right place. Here, we often have 100+ open home tuition jobs that are genuine and 100% verified. Whether you are starting your career as a tuition teacher or an expert in your field, we can help you find your next tuition. You can search and apply to the tuition jobs that best fit your skills, preferred location, class, and subjects.
+                        </p>
+                        <button className="search-tuition-btn">
+                            Search <FaArrowRight className="arrow-icon" />
+                        </button>
+                    </div>
+                </div>
+
+                <div className="image-section">
+                    <h2><br></br>Tuition Types</h2>
+                    <p>Find the Best Tuition Type which Suits You Most</p>
+                </div>
+                <div className="tuition-types">
+                    <img src="/images/type1.png" alt="Type 1" className="tuition-type-img" />
+                    <img src="/images/type2.png" alt="Type 2" className="tuition-type-img" />
+                    <img src="/images/type3.png" alt="Type 3" className="tuition-type-img" />
+                </div>
+            </section>
+
+
             <section className="featured-tuition">
                 <h2><br></br>Featured Tuition</h2>
                 <div className="tuition-list">
