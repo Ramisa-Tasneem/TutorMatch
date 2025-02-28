@@ -1,0 +1,29 @@
+.tuition-details-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.details-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.apply-now-btn,
+.back-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.apply-now-btn:hover,
+.back-btn:hover {
+    background-color: #0056b3;
+}
