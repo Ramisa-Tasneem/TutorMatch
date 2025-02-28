@@ -1,0 +1,87 @@
+h1 {
+    text-align: left;
+}
+
+h2 {
+    text-align: right; 
+    margin-right: 20px; /* Adjust spacing if needed */
+}
+
+.tutor-request-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 120vh;
+}
+
+.tutor-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Keep text aligned left */
+    max-width: 600px; /* Ensure content width is controlled */
+    margin-left: auto; /* Pushes content to the right */
+    margin-right: 750px; /* Adjust distance from the right */
+}
+
+/* Move the form container to the right */
+.form-container {
+    max-width: 600px;
+    margin-left: auto; /* Pushes form to the right */
+    margin-right: 50px; /* Adjusts distance from the right */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left;
+}
+
+input, select, textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 80px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #864285;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #bdaa4d;
+}
+
+.chart-container {
+    position: absolute; /* Use absolute to place it freely */
+    top: calc(3in + 10px); /* 1 inch below the navbar */
+    right: 0; /* Align to the right */
+    padding-right: 20px; /* Optional: Adjust spacing */
+}
+/* Chart Image Styling */
+
+
+.chart-image {
+    width: 700px;  /* Set your preferred width */
+    height: 550px; /* Set your preferred height */
+    object-fit: cover;
+}
