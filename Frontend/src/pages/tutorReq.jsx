@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import "../tutorReq.css"; // Ensure the correct path
+import "../tutorReq.css"; 
 
 const TutorRequest = () => {
   return (
@@ -77,8 +77,6 @@ const TutorRequest = () => {
           </form>
         </div>
       </div>
-
-      {/* Add chart image anywhere on the page */}
         <div className="chart-container">
         <img src="/images/chart.png" alt="Chart" className="chart-image" />
 
@@ -90,3 +88,5 @@ const TutorRequest = () => {
 };
 
 export default TutorRequest;
+
+

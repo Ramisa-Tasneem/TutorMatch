@@ -4,6 +4,8 @@ import Register from "./pages/register";
 import Login from "./pages/login";
 import ProfilePage from "./pages/ProfilePage"; 
 import TutorRequest from "./pages/tutorReq"; 
+import AboutUs from "./pages/aboutUs";
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/tutor-request" element={<TutorRequest />} />
         <Route path="/profile" element={<ProfilePage />} /> 
+        <Route path="/about-us" element={<AboutUs />} />
   
 
 

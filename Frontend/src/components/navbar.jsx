@@ -19,26 +19,31 @@ const Navbar = () => {
 
             <div className="nav-links">
                 <Link to="/" className="nav-btn">Home</Link>
-                <Link to="/about-tutors" className="nav-btn">About Tutors</Link>
                 <Link to="/tutor-request" className="nav-btn">TUTOR REQUEST</Link>
-                
                 <Link to="/find-tutions" className="nav-btn">Find Tuition</Link>
-                <Link to="/post-tution" className="nav-btn">Post a Tuition</Link>
+                <Link to="/about-us" className="nav-btn">About Us</Link> 
             </div>
 
             <div className="auth-buttons">
-                {token ? (<><Link to="/profile" className="auth-btn">
-                    <FaUserPlus className="icon" /> Profile
-                </Link>
-                    <button onClick={handleLogout} className="auth-btn">  {/* ✅ FIXED: Properly closed */}
-                        <FaSignInAlt className="icon" /> Logout
-                    </button></>) :
-                    (<><Link to="/register" className="auth-btn">
-                        <FaUserPlus className="icon" /> Register
-                    </Link>
-                        <Link to="/login" className="auth-btn">  {/* ✅ FIXED: Properly closed */}
+                {token ? (
+                    <>
+                        <Link to="/profile" className="auth-btn">
+                            <FaUserPlus className="icon" /> Profile
+                        </Link>
+                        <button onClick={handleLogout} className="auth-btn">
+                            <FaSignInAlt className="icon" /> Logout
+                        </button>
+                    </>
+                ) : (
+                    <>
+                        <Link to="/register" className="auth-btn">
+                            <FaUserPlus className="icon" /> Register
+                        </Link>
+                        <Link to="/login" className="auth-btn">
                             <FaSignInAlt className="icon" /> Login
-                        </Link></>)}
+                        </Link>
+                    </>
+                )}
             </div>
         </nav>
     );
