@@ -6,8 +6,6 @@ use App\Http\Controllers\PostTuitionController;
 use Illuminate\Support\Facades\Route;
 
 
-use Illuminate\Support\Facades\Route;
-
 
 Route::group(['middleware' => 'auth:api'], function () {
     Route::get('/profile', [AuthController::class, 'profile']);
@@ -27,8 +25,4 @@ Route::get('post-tuitions/{id}', [PostTuitionController::class, 'show']);
 Route::put('post-tuitions/{id}', [PostTuitionController::class, 'update']);
 Route::delete('post-tuitions/{id}', [PostTuitionController::class, 'destroy']);
 
-
-
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/register', [AuthController::class, 'register']);
 
