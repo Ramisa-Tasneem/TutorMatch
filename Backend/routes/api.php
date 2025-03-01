@@ -1,5 +1,6 @@
 <?php                                                                                            
 
+use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostTuitionController;
@@ -26,3 +27,4 @@ Route::put('post-tuitions/{id}', [PostTuitionController::class, 'update']);
 Route::delete('post-tuitions/{id}', [PostTuitionController::class, 'destroy']);
 
 
+Route::post('/applicant', [ApplicantController::class, 'store']);
