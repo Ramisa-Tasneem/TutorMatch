@@ -6,6 +6,8 @@ import ProfilePage from "./pages/ProfilePage";
 import TuitionList from "./pages/TuitionList";
 import TuitionDetails from "./pages/TuitionDetails";
 import TutorRequest from "./pages/tutorReq"; 
+import AboutUs from "./pages/aboutUs";
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Route path="/find-tutions" element={<TuitionList />} />
         <Route path="/tuition/:id" element={<TuitionDetails />} />
         <Route path="/profile" element={<ProfilePage />} /> 
+        <Route path="/about-us" element={<AboutUs />} />
   
 
 
