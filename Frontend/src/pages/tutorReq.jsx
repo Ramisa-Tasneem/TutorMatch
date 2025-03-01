@@ -1,92 +1,124 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import "../tutorReq.css"; 
+import "../tutorReq.css";
 
 const TutorRequest = () => {
+  const initialFormState = {
+    StudentName: "",
+    ParentName: "",
+    ParentEmail: "",
+    PhoneNumber: "",
+    Class: "",
+    Subject: "",
+    City: "",
+    Area: "",
+    Time: "",
+    Salary: "",
+    PreferredMedium: "",
+    ShortTuitionDescription: "",
+  };
+
+  const [formData, setFormData] = useState(initialFormState);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await axios.post("http://localhost:8000/api/post-tuitions", formData, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+
+      alert("Tuition request submitted successfully!");
+      setFormData(initialFormState);
+    } catch (error) {
+      console.error("Error submitting request:", error.response?.data || error.message);
+      alert("Failed to submit request. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="tutor-request-container">
       <Navbar />
       <div className="tutor-content">
         <h1>আপনি কি টিউটর খুঁজছেন?</h1>
         <p>তাহলে ফর্মটি পূরণ করে জানান আপনি কোন ক্লাস/এরিয়ার জন্য টিউটর খুঁজছেন। </p>
-
         <div className="form-container">
-          <form>
+          <form onSubmit={handleSubmit}>
             <label>Student Name:</label>
-            <input type="text" placeholder="Enter student name" required />
+            <input type="text" name="StudentName" value={formData.StudentName} onChange={handleChange} required />
 
             <label>Parent's Name:</label>
-            <input type="text" placeholder="Enter parent's name" required />
+            <input type="text" name="ParentName" value={formData.ParentName} onChange={handleChange} required />
 
             <label>Parent's Email:</label>
-            <input type="email" placeholder="Enter parent's email" required />
+            <input type="email" name="ParentEmail" value={formData.ParentEmail} onChange={handleChange} required />
 
             <label>Phone No.:</label>
-            <input type="tel" placeholder="Enter phone number" required />
+            <input type="tel" name="PhoneNumber" value={formData.PhoneNumber} onChange={handleChange} required />
 
             <label>Class:</label>
-            <select required>
+            <select name="Class" value={formData.Class} onChange={handleChange} required>
               <option value="">Select Class</option>
-              <option value="Class 1">Class 1</option>
-              <option value="Class 2">Class 2</option>
-              <option value="Class 3">Class 3</option>
-              <option value="Class 4">Class 4</option>
-              <option value="Class 5">Class 5</option>
-              <option value="Class 6">Class 6</option>
-              <option value="Class 7">Class 7</option>
-              <option value="Class 8">Class 8</option>
-              <option value="Class 9">Class 9</option>
-              <option value="Class 10">Class 10</option>
-              <option value="HSC 1st Year">HSC 1st Year</option>
-              <option value="HSC 2nd Year">HSC 2nd Year</option>
+              {["Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6", "Class 7", "Class 8", "Class 9", "Class 10", "HSC 1st Year", "HSC 2nd Year"].map((cls) => (
+                <option key={cls} value={cls}>{cls}</option>
+              ))}
             </select>
 
             <label>Subject:</label>
-            <input type="text" placeholder="Enter subject(s)" required />
+            <input type="text" name="Subject" value={formData.Subject} onChange={handleChange} required />
 
             <label>City:</label>
-            <input type="text" placeholder="Enter city" required />
+            <input type="text" name="City" value={formData.City} onChange={handleChange} required />
 
             <label>Area:</label>
-            <input type="text" placeholder="Enter area" required />
+            <input type="text" name="Area" value={formData.Area} onChange={handleChange} required />
 
             <label>Preferred Time:</label>
-            <select required>
+            <select name="Time" value={formData.Time} onChange={handleChange} required>
               <option value="">Select Time</option>
-              <option value="Morning">Morning</option>
-              <option value="Afternoon">Afternoon</option>
-              <option value="Evening">Evening</option>
+              {["Morning", "Afternoon", "Evening"].map((time) => (
+                <option key={time} value={time}>{time}</option>
+              ))}
             </select>
 
             <label>Preferred Salary:</label>
-            <input type="number" placeholder="Enter expected salary" required />
+            <input type="number" name="Salary" value={formData.Salary} onChange={handleChange} required />
 
             <label>Medium:</label>
-            <select required>
+            <select name="PreferredMedium" value={formData.PreferredMedium} onChange={handleChange} required>
               <option value="">Select Medium</option>
-              <option value="Bangla Medium">Bangla Medium</option>
-              <option value="English Medium">English Medium</option>
-              <option value="English Version">English Version</option>
+              {["Bangla Medium", "English Medium", "English Version"].map((medium) => (
+                <option key={medium} value={medium}>{medium}</option>
+              ))}
             </select>
 
             <label>Description:</label>
-            <textarea placeholder="Enter additional details"></textarea>
+            <textarea name="ShortTuitionDescription" value={formData.ShortTuitionDescription} onChange={handleChange}></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={loading}>{loading ? "Submitting..." : "Submit"}</button>
           </form>
         </div>
       </div>
-        <div className="chart-container">
+
+      <div className="chart-container">
         <img src="/images/chart.png" alt="Chart" className="chart-image" />
-
-        </div>
-
+      </div>
       <Footer />
     </div>
   );
 };
 
 export default TutorRequest;
-
-
