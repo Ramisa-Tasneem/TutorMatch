@@ -7,6 +7,8 @@ import TuitionList from "./pages/TuitionList";
 import TuitionDetails from "./pages/TuitionDetails";
 import TutorRequest from "./pages/tutorReq"; 
 
+import ApplyNow from "./pages/applynow";
+
 function App() {
   return (
     <Router>
@@ -18,7 +20,7 @@ function App() {
         <Route path="/find-tutions" element={<TuitionList />} />
         <Route path="/tuition/:id" element={<TuitionDetails />} />
         <Route path="/profile" element={<ProfilePage />} /> 
-  
+        <Route path="/applynow" element={<ApplyNow/>} /> 
 
 
       </Routes>

@@ -15,7 +15,16 @@ const Home = () => {
         { title: "Physics", location: "Khilgaon", type: "Group", salary: "5k" },
         { title: "Higher Math", location: "Uttara", type: "Group", salary: "8k" },
     ];
+    const applynow =( ) =>{
 
+        navigate("/applynow")
+
+    }
+
+
+
+
+   
     return (
         <>
             <Navbar />
@@ -72,7 +81,7 @@ const Home = () => {
                             <p>Type: {tuition.type}</p>
                             <p>Salary: {tuition.salary}</p>
                             <button className="details-btn">Details</button>
-                            <button className="apply-btn">Apply now</button>
+                            <button onClick={applynow} className="apply-btn">Apply now</button>
                         </div>
                     ))}
                 </div>
