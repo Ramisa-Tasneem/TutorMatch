@@ -105,6 +105,12 @@ const TutorRequest = () => {
               ))}
             </select>
 
+            <label>Type</label>
+            <input type="text" name="Type" value={formData.Type} onChange={handleChange} required />
+
+            <label>Experience:</label>
+            <input type="text" name="Experience" value={formData.Experience} onChange={handleChange} required />
+
             <label>Description:</label>
             <textarea name="ShortTuitionDescription" value={formData.ShortTuitionDescription} onChange={handleChange}></textarea>
 
