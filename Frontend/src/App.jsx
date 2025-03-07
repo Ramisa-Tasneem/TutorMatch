@@ -11,6 +11,7 @@ import AboutUs from "./pages/aboutUs";
 
 import ApplyNow from "./pages/ApplyNow";
 
+
 function App() {
   return (
     <Router>
@@ -18,12 +19,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/tutor-request" element={<TutorRequest />} />
         <Route path="/find-tutions" element={<TuitionList />} />
         <Route path="/find-tutions/:id" element={<TuitionDetails />} />
-        <Route path="/tutor-request" element={<TutorRequest />} />
-
-        <Route path="/tuition/:id" element={<TuitionDetails />} />
         <Route path="/profile" element={<ProfilePage />} />
 
         <Route path="/applynow" element={<ApplyNow />} />
@@ -32,9 +30,9 @@ function App() {
 
 
 
-
       </Routes>
     </Router>
   );
 }
 export default App;                                                                                        
+

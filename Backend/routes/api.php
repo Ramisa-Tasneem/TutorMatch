@@ -1,9 +1,11 @@
 <?php                                                                                            
 
+use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostTuitionController;
 use Illuminate\Support\Facades\Route;
+
 
 
 Route::group(['middleware' => 'auth:api'], function () {
@@ -37,7 +39,4 @@ Route::put('post-tuitions/{id}', [PostTuitionController::class, 'update']);
 Route::delete('post-tuitions/{id}', [PostTuitionController::class, 'destroy']);
 
 
-
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/register', [AuthController::class, 'register']);
-
+Route::post('/applicant', [ApplicantController::class, 'store']);

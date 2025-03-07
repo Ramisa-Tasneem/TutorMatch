@@ -36,9 +36,17 @@ class PostTuitionController extends Controller
             'Type' => 'nullable|string|max:50',
         ]);
 
-        $post = PostTuition::create($validatedData);
-
-        return response()->json($post, 201);
+        try {
+            $post = PostTuition::create($validatedData);
+    
+            return response()->json([
+                'message' => 'Tuition request submitted successfully',
+                'post' => $post
+            ], 201);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Failed to submit request', 'details' => $e->getMessage()], 500);
+        }
+        
     }
     public function show($id)
     {
