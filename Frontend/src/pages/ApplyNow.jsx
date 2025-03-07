@@ -25,18 +25,31 @@ const ApplyNow = () => {
   };
 
   const handleSubmit = async(e) => {
-
     e.preventDefault();
-    try { 
-        const response =await axios.post ('http://localhost:8000/api/applicant',formData)
-       console.log(response.data) 
-    } catch (error) {
-        console.log(error)
-        
-    }
-    console.log("Form Submitted:", formData);
     
-  };
+    const formDataToSend = new FormData();
+formDataToSend.append('name', formData.name);
+formDataToSend.append('phone', formData.phone);
+formDataToSend.append('email', formData.email);
+formDataToSend.append('hsc_year', formData.hscYear);  // Note the underscore
+formDataToSend.append('ssc_year', formData.sscYear);  // Note the underscore
+formDataToSend.append('current_student_at', formData.currentStudentAt);  // Note the underscore
+formDataToSend.append('student_id', formData.studentId);  // Note the underscore
+formDataToSend.append('national_id', formData.nationalId);  // Note the underscore
+
+
+    try { 
+        const response = await axios.post('http://localhost:8000/api/applicant', formDataToSend, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
+        console.log(response.data);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 
   return (
     <div className="apply-form-container">
