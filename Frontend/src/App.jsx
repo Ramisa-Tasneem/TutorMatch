@@ -5,6 +5,11 @@ import Login from "./pages/login";
 import ProfilePage from "./pages/ProfilePage";
 import TuitionList from "./pages/TuitionList";
 import TuitionDetails from "./pages/TuitionDetails";
+import TutorRequest from "./pages/tutorReq";
+import AboutUs from "./pages/aboutUs";
+
+
+import ApplyNow from "./pages/ApplyNow";
 
 function App() {
   return (
@@ -16,10 +21,20 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/find-tutions" element={<TuitionList />} />
         <Route path="/find-tutions/:id" element={<TuitionDetails />} />
+        <Route path="/tutor-request" element={<TutorRequest />} />
+
+        <Route path="/tuition/:id" element={<TuitionDetails />} />
+        <Route path="/profile" element={<ProfilePage />} />
+
+        <Route path="/applynow" element={<ApplyNow />} />
+
+        <Route path="/about-us" element={<AboutUs />} />
+
+
+
 
       </Routes>
     </Router>
   );
 }
-
 export default App;                                                                                        
