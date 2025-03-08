@@ -16,6 +16,11 @@ return [
             'provider' => 'users',
             'hash'=> false
         ],
+        'tutor' => [
+            'driver' => 'jwt',
+            'provider' => 'tutors',
+            'hash'=> false
+        ],
 
     ],
 
@@ -23,6 +28,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'tutors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Tutor::class,
         ],
     ],
 

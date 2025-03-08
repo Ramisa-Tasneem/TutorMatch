@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { FaMapMarkerAlt, FaArrowRight } from "react-icons/fa";
 
 const Home = () => {
+    const navigate = useNavigate(); // Initialize navigate function
+
     const featuredTuition = [
         { title: "Economics", location: "Goran", type: "Online", salary: "4k" },
         { title: "Bangla", location: "Gulshan", type: "Offline", salary: "6k" },
@@ -12,16 +15,16 @@ const Home = () => {
         { title: "Physics", location: "Khilgaon", type: "Group", salary: "5k" },
         { title: "Higher Math", location: "Uttara", type: "Group", salary: "8k" },
     ];
+    const applynow =( ) =>{
 
-    const categories = [
-        { name: "English", count: 50 },
-        { name: "Finance", count: 20 },
-        { name: "Arabic", count: 25 },
-        { name: "Data Science", count: 30 },
-        { name: "Higher Math", count: 70 },
-        { name: "Biology", count: 10 },
-    ];
+        navigate("/applynow")
 
+    }
+
+
+
+
+   
     return (
         <>
             <Navbar />
@@ -32,10 +35,11 @@ const Home = () => {
                 <p className="sub-heading">
                     <FaMapMarkerAlt className="location-icon" /> Find the Right Tutor in Your Area
                 </p>
-                <button className="find-tutor-btn">
+                <button className="find-tutor-btn" onClick={() => navigate("/tutor-request")}>
                     Find a Tutor <FaArrowRight className="arrow-icon" />
                 </button>
             </header>
+
 
             <section className="search-tuition">
                 <h2 className="search-heading">Search Tuitions</h2>
@@ -56,54 +60,34 @@ const Home = () => {
                 </div>
 
                 <div className="image-section">
-                     <h2><br></br>Tuition Types</h2>
-                     <p>Find the Best Tuition Type which Suits You Most</p>
-               </div>
-                
-                
-                
-                
-                
-                
+                    <h2><br></br>Tuition Types</h2>
+                    <p>Find the Best Tuition Type which Suits You Most</p>
+                </div>
                 <div className="tuition-types">
-        <img src="/images/type1.png" alt="Type 1" className="tuition-type-img" />
-        <img src="/images/type2.png" alt="Type 2" className="tuition-type-img" />
-        <img src="/images/type3.png" alt="Type 3" className="tuition-type-img" />
-    </div>
-            </section>
-         
-
-            <section className="featured-tuition">
-                <h2><br></br>Featured Tuition</h2>
-                <div className="tuition-list">
-                    {featuredTuition.map((tuition, index) => (
-                        <div key={index} className="tuition-card">
-                            <h3>{tuition.title}</h3>
-                            <p>Location: {tuition.location}</p>
-                            <p>Type: {tuition.type}</p>
-                            <p>Salary: {tuition.salary}</p>
-                            <button className="details-btn">Details</button>
-                            <button className="apply-btn">Apply now</button>
-                        </div>
-                    ))}
+                    <img src="/images/type1.png" alt="Type 1" className="tuition-type-img" />
+                    <img src="/images/type2.png" alt="Type 2" className="tuition-type-img" />
+                    <img src="/images/type3.png" alt="Type 3" className="tuition-type-img" />
                 </div>
             </section>
 
-            <section className="latest-tuition">
-                <h2>Latest Tuition</h2>
-                <div className="tuition-list">
-                    {featuredTuition.map((tuition, index) => (
-                        <div key={index} className="tuition-card">
-                            <h3>{tuition.title}</h3>
-                            <p>Location: {tuition.location}</p>
-                            <p>Type: {tuition.type}</p>
-                            <p>Salary: {tuition.salary}</p>
-                            <button className="details-btn">Details</button>
-                            <button className="apply-btn">Apply now</button>
-                        </div>
-                    ))}
-                </div>
+               <br/ >
+            <section className="featured-tutions">
+                 <h2><br></br>How it Works?</h2>
+                 <p className="search-subheading">Here's how you can apply</p>
+                 <br />
+                 <br />
+                <img src="/images/hp1.png" alt="How it Works" className="how-it-works-img" />
             </section>
+
+            <section className="featured-tutions">
+                 <h2><br></br>Here's how it works for Guardians</h2>
+                 
+                 <br />
+                 <br />
+                <img src="/images/hp2.png" alt="How it Works" className="how-it-works-img" />
+
+            </section>
+
 
             <Footer />
         </>
