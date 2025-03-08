@@ -15,7 +15,16 @@ const Home = () => {
         { title: "Physics", location: "Khilgaon", type: "Group", salary: "5k" },
         { title: "Higher Math", location: "Uttara", type: "Group", salary: "8k" },
     ];
+    const applynow =( ) =>{
 
+        navigate("/applynow")
+
+    }
+
+
+
+
+   
     return (
         <>
             <Navbar />
@@ -76,6 +85,7 @@ const Home = () => {
                  <br />
                  <br />
                 <img src="/images/hp2.png" alt="How it Works" className="how-it-works-img" />
+
             </section>
 
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "../tutorReq.css";
-import Navbar from "../components/navbar"; 
+import Navbar from "../components/navbar";
 
 const AboutUs = () => {
   return (
@@ -30,8 +30,14 @@ const AboutUs = () => {
             and helps tutors grow their careers. Whether you're looking to improve your grades or share your expertise, we’ve got you covered!
           </p>
           <p><strong>Join us today and take the next step toward academic success!</strong></p>
+          <p><strong>If you have any more inquary or complain.Chat With US</strong></p>
+          <div className="whatsapp-container">
+            <a href="https://wa.me/8801613192428?text=I'm%20interested%20to%20have%20a%20chat%20with%20TutorMatch " target="_blank">
+              <img src="/images/whatsapp.jpg" alt="WhatsApp" className="whatsapp-image" style={{ height: "80px", width: "80px" }} />
+            </a>
+          </div>
         </div>
-        
+
         <div className="about-image">
           <img src="/images/about.jpg" alt="About Tutor Match" />
         </div>
