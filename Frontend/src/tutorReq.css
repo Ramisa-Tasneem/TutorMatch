@@ -2,21 +2,21 @@
     display: flex;
     flex-direction: column;
     min-height: 120vh;
-    position: relative; 
+    position: relative;
 }
+
 .tutor-content {
     flex: 1;
     padding: 20px;
     text-align: left;
-    max-width: 600px; 
-    margin-left: auto; 
-    margin-right: 750px; 
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: 50px;
 }
-
 
 .form-container {
     max-width: 600px;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: 50px;
     padding: 20px;
     background-color: #f9f9f9;
@@ -24,23 +24,22 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 form {
     display: flex;
     flex-direction: column;
 }
 
-label {
-    font-weight: bold;
-    margin-top: 10px;
-    text-align: left;
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
-input, select, textarea {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.form-row input,
+.form-row select,
+.form-row textarea {
+    width: 48%; /* Adjust width to fit 2 elements side by side */
 }
 
 textarea {
@@ -65,17 +64,30 @@ button:hover {
 .chart-container {
     position: absolute;
     top: calc(3in + 10px);
-    right: 50px; 
+    left: 50px;
+    animation: moveUpDown 3s ease-in-out infinite; /* Add animation */
 }
-
-
-
 
 .chart-image {
-    width: 700px;  
-    height: 550px; 
+    width: 600px;
+    height: 450px;
     object-fit: cover;
 }
+
+/* Keyframes for up and down movement */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Move up by 20px */
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
+
 
 /* -------------------------------------aboutUs---------------------------------- */
 
@@ -146,6 +158,5 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-    /* Add animation for floating effect */
     animation: floatAnimation 3s infinite ease-in-out;
 }

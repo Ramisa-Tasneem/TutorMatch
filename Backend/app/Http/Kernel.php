@@ -24,10 +24,10 @@ class Kernel extends HttpKernel
         ],
     ];
 
-
     protected $routeMiddleware = [
         'test.middleware' => \App\Http\Middleware\TestMiddleware::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
     'auth:api' => \Tymon\JWTAuth\Http\Middleware\Authenticate::class,
+    'auth:tutor' => \Tymon\JWTAuth\Http\Middleware\Authenticate::class,
     ];
 }

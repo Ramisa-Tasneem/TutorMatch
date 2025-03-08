@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
@@ -10,9 +9,8 @@ const ProfilePage = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("authToken");
 
     if (!token) {
       navigate("/login");
@@ -20,20 +18,21 @@ const ProfilePage = () => {
     }
 
 
-    const storedUser = JSON.parse(localStorage.getItem("user"));
+    const name = localStorage.getItem("name");
+    const email = localStorage.getItem("email");
 
-    if (storedUser) {
-      setUser(storedUser);
+    if (name && email) {
+      setUser({ name, email });
     } else {
       setError("User data is missing.");
     }
   }, [navigate]);
-  const name = localStorage.getItem("name");
-  const email = localStorage.getItem("email");
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("userRole");
+    localStorage.removeItem("name");
+    localStorage.removeItem("email");
     alert("Logged out successfully!");
     navigate("/login");
   };
@@ -51,19 +50,16 @@ const ProfilePage = () => {
             <p className="error-message">{error}</p>
           ) : user ? (
             <>
-              <p><strong>Name:</strong> {name}</p>
-              <p><strong>Email:</strong> {email}</p>
-
+              <p><strong>Name:</strong> {user.name}</p>
+              <p><strong>Email:</strong> {user.email}</p>
             </>
           ) : (
             <p>Loading...</p>
           )}
         </div>
       </div>
-
     </>
   );
 };
 
 export default ProfilePage;
-

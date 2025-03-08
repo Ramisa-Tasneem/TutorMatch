@@ -70,22 +70,24 @@ const Home = () => {
                 </div>
             </section>
 
-
-            <section className="featured-tuition">
-                <h2><br></br>Featured Tuition</h2>
-                <div className="tuition-list">
-                    {featuredTuition.map((tuition, index) => (
-                        <div key={index} className="tuition-card">
-                            <h3>{tuition.title}</h3>
-                            <p>Location: {tuition.location}</p>
-                            <p>Type: {tuition.type}</p>
-                            <p>Salary: {tuition.salary}</p>
-                            <button className="details-btn">Details</button>
-                            <button onClick={applynow} className="apply-btn">Apply now</button>
-                        </div>
-                    ))}
-                </div>
+               <br/ >
+            <section className="featured-tutions">
+                 <h2><br></br>How it Works?</h2>
+                 <p className="search-subheading">Here's how you can apply</p>
+                 <br />
+                 <br />
+                <img src="/images/hp1.png" alt="How it Works" className="how-it-works-img" />
             </section>
+
+            <section className="featured-tutions">
+                 <h2><br></br>Here's how it works for Guardians</h2>
+                 
+                 <br />
+                 <br />
+                <img src="/images/hp2.png" alt="How it Works" className="how-it-works-img" />
+
+            </section>
+
 
             <Footer />
         </>

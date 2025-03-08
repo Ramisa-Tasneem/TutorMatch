@@ -1,26 +1,10 @@
-.login-page {
-    background-color: white !important;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-.error-message{
-    color: red;
-    border: 2px solid red;
-    border-radius: 10px;
-    padding: 12px;
-}
 .register-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
-    gap: 50px;
     padding: 20px;
-    background-color: white;
-    flex-direction: row;
-}
-
+  }
 .register-image {
     position: absolute;
     top: 200px;
@@ -49,17 +33,15 @@
 }
 
 .register-form {
-    position: absolute;
-    top: 120px;
-    right: 180px;
-    width: 400px;
-    height: auto;
-    padding: 30px;
-    background: white;
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-}
+    padding: 30px;
+    width: 45%; 
+    max-width: 900px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto; 
+    max-height: 700px;
+  }
 
 .register-form h2 {
     text-align: center;
@@ -129,8 +111,102 @@
     flex-direction: row;
 }
 
+.role-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    background-color: #f0f0f5;
+    padding: 10px;
+    border-radius: 8px;
+    height: 50px;
+}
 
-          
+.role-option {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.role-option input {
+    display: none;
+}
+
+.role-option img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.role-option.selected {
+    background-color: #800080;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.role-option.selected img {
+    border: 2px solid white;
+    padding: 3px;
+    border-radius: 50%;
+}
+.role-option.selected img {
+    border: 2px solid white;
+    padding: 3px;
+    border-radius: 50%;
+}
+.password-container {
+    display: flex;
+    gap: 20px; 
+  }
+  
+  .password-container div {
+    flex: 1; 
+  }
+  
+
+  .gender-phone-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .gender-phone-container div {
+    flex: 1;
+  }
+  
+  .tuition-location-container {
+    display: flex;
+    gap: 20px;
+}
+
+.tuition-location-container div {
+    flex: 1;
+}
+
+
+
+/*----------------------------------------------*/
+        
+
+.login-page {
+    background-color: white !important;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.error-message{
+    color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 12px;
+}
 
 body {
     background-color: white !important;
@@ -257,3 +333,4 @@ body {
 .move-left {
     flex-direction: row;
 }
+
