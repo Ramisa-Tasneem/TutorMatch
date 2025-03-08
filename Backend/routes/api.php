@@ -5,6 +5,7 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostTuitionController;
 use App\Http\Controllers\InterestedTutorController;
+use App\Http\Controllers\ChatController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -39,5 +40,10 @@ Route::get('/interested-tutors/{id}', [InterestedTutorController::class, 'show']
 Route::put('/interested-tutors/{id}', [InterestedTutorController::class, 'update']);
 Route::delete('/interested-tutors/{id}', [InterestedTutorController::class, 'destroy']);
 
+Route::middleware('auth:api')->group(function () {
+    Route::get('/messages', [ChatController::class, 'index']); // Get all messages
+    Route::post('/send-message', [ChatController::class, 'broadcast']); // Send and broadcast message
+    Route::get('/receive-messages', [ChatController::class, 'receive']); // Get messages for the user
+});
 
 Route::post('/applicant', [ApplicantController::class, 'store']);
