@@ -5,6 +5,8 @@
         "This file is @generated automatically"
     ],
     "content-hash": "cf89728c086435bc31ceeab2a6ae130c",
+
+    "content-hash": "ec124894aaf36cd65375d4335a76f1ac"
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8541,7 +8543,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "tymon/jwt-auth": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

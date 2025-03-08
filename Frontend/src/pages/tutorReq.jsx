@@ -105,6 +105,12 @@ const TutorRequest = () => {
               ))}
             </select>
 
+            <label>Type</label>
+            <input type="text" name="Type" value={formData.Type} onChange={handleChange} required />
+
+            <label>Experience:</label>
+            <input type="text" name="Experience" value={formData.Experience} onChange={handleChange} required />
+
             <label>Description:</label>
             <textarea name="ShortTuitionDescription" value={formData.ShortTuitionDescription} onChange={handleChange}></textarea>
 
@@ -114,7 +120,7 @@ const TutorRequest = () => {
       </div>
 
       <div className="chart-container">
-        <img src="/images/chart.png" alt="Chart" className="chart-image" />
+        <img src="/images/tutorReq.jpg" alt="Chart" className="chart-image" />
       </div>
       <Footer />
     </div>
