@@ -21,7 +21,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/tutor-request" element={<TutorRequest />} />
         <Route path="/find-tutions" element={<TuitionList />} />
-        <Route path="/find-tutions/:id" element={<TuitionDetails />} />
+        <Route path="/tuition/:id" element={<TuitionDetails />} />
         <Route path="/profile" element={<ProfilePage />} />
 
         <Route path="/applynow" element={<ApplyNow />} />
@@ -34,5 +34,5 @@ function App() {
     </Router>
   );
 }
-export default App;                                                                                        
+export default App;
 
