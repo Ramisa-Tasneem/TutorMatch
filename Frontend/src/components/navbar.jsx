@@ -1,10 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { FaSignInAlt, FaUserPlus } from "react-icons/fa";
+import TutorModal from "../pages/TutorModal"; 
 
 const Navbar = () => {
     const navigate = useNavigate();
 
+
     const token = localStorage.getItem("authToken");
+
 
     const handleLogout = () => {
         localStorage.removeItem("authToken");
@@ -14,11 +18,12 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="navbar">
-            <div className="logo">
-                <img src="/images/logo.png" alt="TutorMatch Logo" />
-            </div>
-
+        <>
+            <nav className="navbar">
+                <div className="logo">
+                    <img src="/images/logo.png" alt="TutorMatch Logo" />
+                </div>
+      
             <div className="nav-links">
                 <Link to="/" className="nav-btn">Home</Link>
                 <Link to="/tutor-request" className="nav-btn">TUTOR REQUEST</Link>
@@ -50,6 +55,7 @@ const Navbar = () => {
                 )}
             </div>
         </nav >
+
     );
 };
 export default Navbar;

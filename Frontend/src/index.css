@@ -390,15 +390,15 @@ body {
 }
 
 .how-it-works-img {
-  width: 1100px;  /* Adjust width */
-  height: 550px; /* Adjust height */
-  display: block; /* Ensures no extra spacing */
-  margin: 20px auto; /* Centers the image */
-  border-radius: 10px; /* Optional for rounded edges */
+  width: 1100px;  
+  height: 550px; 
+  display: block; 
+  margin: 20px auto; 
+  border-radius: 10px; 
 }
 
 .featured-tutions {
-  text-align: center; /* Centers all text inside the section */
+  text-align: center;
 }
 
 
