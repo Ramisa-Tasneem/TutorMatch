@@ -12,6 +12,7 @@ import BeTutorStep from "./pages/be-tutor-step";
 
 
 import ApplyNow from "./pages/ApplyNow";
+import TutorPage from "./pages/TutorPage";
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         <Route path="/tuition/:id" element={<TuitionDetails />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/be-tutor-step" element={<BeTutorStep />} />
-
+        <Route path="/tutorpage" element={<TutorPage />} />
         <Route path="/applynow" element={<ApplyNow />} />
 
         <Route path="/about-us" element={<AboutUs />} />

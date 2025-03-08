@@ -6,7 +6,7 @@ const TutorModal = ({ onClose }) => {
 
     const handleContinue = () => {
         onClose(); // Close the modal before navigating
-        navigate("/be-tutor-step");
+        navigate("/tutorpage");
     };
 
     return (
