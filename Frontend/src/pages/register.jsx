@@ -14,6 +14,7 @@ const Register = () => {
     phone: "",
     tuition_district: "",
     preferred_tuition_area: "",
+    tutor_location: "", // Added Tutor Location field
   });
 
   const [error, setError] = useState("");
@@ -49,6 +50,7 @@ const Register = () => {
         phone: formData.phone,
         tuition_district: formData.tuition_district,
         preferred_tuition_area: formData.preferred_tuition_area,
+        tutor_location: formData.tutor_location, // Included Tutor Location in request
       }),
     };
 
@@ -114,7 +116,7 @@ const Register = () => {
                 onChange={() => handleRoleChange("student")}
               />
               <img src="/images/studentlogo.jpg" alt="Student" />
-              Gurdian
+              Guardian
             </label>
           </div>
 
@@ -157,8 +159,17 @@ const Register = () => {
                 <label>Tuition District</label>
                 <input type="text" name="tuition_district" placeholder="District" value={formData.tuition_district} onChange={handleChange} required />
 
-                <label>Preferred Tuition Area</label>
-                <input type="text" name="preferred_tuition_area" placeholder="Preferred Areas" value={formData.preferred_tuition_area} onChange={handleChange} required />
+                {/* Preferred Tuition Area & Tutor Location in one row */}
+                <div className="tuition-location-container">
+                  <div>
+                    <label>Preferred Tuition Area</label>
+                    <input type="text" name="preferred_tuition_area" placeholder="Preferred Areas" value={formData.preferred_tuition_area} onChange={handleChange} required />
+                  </div>
+                  <div>
+                    <label>Tutor Location</label>
+                    <input type="text" name="tutor_location" placeholder="Your Location" value={formData.tutor_location} onChange={handleChange} required />
+                  </div>
+                </div>
               </>
             )}
 

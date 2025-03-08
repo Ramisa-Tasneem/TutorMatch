@@ -389,6 +389,19 @@ body {
 
 }
 
+.how-it-works-img {
+  width: 1100px;  /* Adjust width */
+  height: 550px; /* Adjust height */
+  display: block; /* Ensures no extra spacing */
+  margin: 20px auto; /* Centers the image */
+  border-radius: 10px; /* Optional for rounded edges */
+}
+
+.featured-tutions {
+  text-align: center; /* Centers all text inside the section */
+}
+
+
 /* Footer */
 footer {
   text-align: center;

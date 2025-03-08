@@ -120,7 +120,7 @@ const TutorRequest = () => {
       </div>
 
       <div className="chart-container">
-        <img src="/images/chart.png" alt="Chart" className="chart-image" />
+        <img src="/images/tutorReq.jpg" alt="Chart" className="chart-image" />
       </div>
       <Footer />
     </div>

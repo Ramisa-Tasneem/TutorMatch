@@ -181,6 +181,15 @@
     flex: 1;
   }
   
+  .tuition-location-container {
+    display: flex;
+    gap: 20px;
+}
+
+.tuition-location-container div {
+    flex: 1;
+}
+
 
 
 /*----------------------------------------------*/
