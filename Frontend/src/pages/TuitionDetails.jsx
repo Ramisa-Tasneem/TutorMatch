@@ -113,7 +113,7 @@ const TuitionDetails = () => {
 
     return (
         <div className="tuition-details-container">
-            <h2>{tuition.Subject} Tuition Details</h2>
+            <h2> Tuition Details</h2>
             <div className="details-card">
                 <p><strong>Student Name:</strong> {tuition.StudentName}</p>
                 <p><strong>Parent Name:</strong> {tuition.ParentName}</p>
@@ -152,7 +152,7 @@ const TuitionDetails = () => {
             </div>
 
             <button className="back-btn" onClick={() => navigate(-1)}>Back</button>
-            <button className="back-btn" onClick={() => navigate(-1)}>Apply now</button>
+            <button className="back-btn" onClick={() => navigate("/applynow")}>Apply now</button>
         </div>
     );
 };

@@ -1,0 +1,127 @@
+.tutor-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Keeps heading and button stacked */
+  align-items: center;
+}
+
+.tutor-container h2 {
+  margin-bottom: 10px;
+}
+
+.tutor-container button {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+}
+
+.tutor-container button:hover {
+  background: #0056b3;
+}
+
+.tutor-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to new row if needed */
+  justify-content: center; /* Centers the cards */
+  gap: 20px; /* Adds space between cards */
+}
+
+.tutor-card {
+  background: #ffffff;
+  padding: 15px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.tutor-card:hover {
+  transform: scale(1.05);
+}
+
+.tutor-card h3 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.tutor-card p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #ffffff;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Modal Title */
+.modal-content h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Modal Text */
+.modal-content p {
+    font-size: 16px;
+    color: #444;
+    margin: 8px 0;
+}
+
+/* Close Button */
+.modal-content button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+    background: #cc0000;
+}
