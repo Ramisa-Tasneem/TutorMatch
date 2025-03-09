@@ -3,10 +3,12 @@ import { FaSignInAlt, FaUserPlus } from "react-icons/fa";
 
 const Navbar = () => {
     const navigate = useNavigate();
-    const token = localStorage.getItem("token");
+
+    const token = localStorage.getItem("authToken");
 
     const handleLogout = () => {
-        localStorage.removeItem("token");
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("userRole");
         alert("Logged Out!");
         navigate("/login");
     };
@@ -21,8 +23,10 @@ const Navbar = () => {
                 <Link to="/" className="nav-btn">Home</Link>
                 <Link to="/tutor-request" className="nav-btn">TUTOR REQUEST</Link>
                 <Link to="/find-tutions" className="nav-btn">Find Tuition</Link>
-                <Link to="/about-us" className="nav-btn">About Us</Link> 
-            </div>
+
+                <Link to="/about-us" className="nav-btn">About Us</Link>
+
+            </div >
 
             <div className="auth-buttons">
                 {token ? (
@@ -45,8 +49,7 @@ const Navbar = () => {
                     </>
                 )}
             </div>
-        </nav>
+        </nav >
     );
 };
-
 export default Navbar;
