@@ -8,13 +8,13 @@ use App\Models\Message;
 
 class ChatController extends Controller
 {
-    // ✅ Get all messages for a specific chat
+    
     public function index()
     {
         return response()->json(Message::all());
     }
 
-    // ✅ Send and broadcast a message
+    
     public function broadcast(Request $request)
     {
         $message = Message::create([
@@ -28,7 +28,7 @@ class ChatController extends Controller
         return response()->json(['message' => 'Message sent successfully!', 'data' => $message]);
     }
 
-    // ✅ Receive messages for a specific chat
+    
     public function receive(Request $request)
     {
         $messages = Message::where('receiver_id', auth()->id())
