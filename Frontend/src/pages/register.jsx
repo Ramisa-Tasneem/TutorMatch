@@ -4,7 +4,7 @@ import "/src/login-register.css";
 import Navbar from "../components/navbar";
 
 const Register = () => {
-  const [role, setRole] = useState("tutor"); // Default role
+  const [role, setRole] = useState("tutor");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,7 +14,7 @@ const Register = () => {
     phone: "",
     tuition_district: "",
     preferred_tuition_area: "",
-    tutor_location: "", // Added Tutor Location field
+    tutor_location: "",
   });
 
   const [error, setError] = useState("");
@@ -40,24 +40,30 @@ const Register = () => {
     setLoading(true);
 
     const requestData = {
-      role,
       name: formData.name,
       email: formData.email,
       password: formData.password,
       password_confirmation: formData.confirmPassword,
-      ...(role === "tutor" && {
-        gender: formData.gender,
-        phone: formData.phone,
-        tuition_district: formData.tuition_district,
-        preferred_tuition_area: formData.preferred_tuition_area,
-        tutor_location: formData.tutor_location, // Included Tutor Location in request
-      }),
+      ...(role === "tutor"
+        ? {
+          gender: formData.gender,
+          phone: formData.phone,
+          tuition_district: formData.tuition_district,
+          preferred_tuition_area: formData.preferred_tuition_area,
+          your_location: formData.tutor_location,
+        }
+        : {}),
     };
+
+    const endpoint =
+      role === "tutor"
+        ? "http://127.0.0.1:8000/api/register/tutor"
+        : "http://127.0.0.1:8000/api/register";
 
     try {
       console.log("Sending registration data:", requestData);
 
-      const response = await fetch("http://127.0.0.1:8000/api/register", {
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -93,7 +99,7 @@ const Register = () => {
         <div className="register-form">
           <h2>REGISTER</h2>
 
-          {/* Role Selection */}
+
           <div className="role-selection">
             <label className={`role-option ${role === "tutor" ? "selected" : ""}`} onClick={() => handleRoleChange("tutor")}>
               <input
@@ -145,9 +151,9 @@ const Register = () => {
                     <label>Gender</label>
                     <select name="gender" value={formData.gender} onChange={handleChange} required>
                       <option value="">Select Gender</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                      <option value="Other">Other</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
                     </select>
                   </div>
                   <div>
@@ -159,7 +165,7 @@ const Register = () => {
                 <label>Tuition District</label>
                 <input type="text" name="tuition_district" placeholder="District" value={formData.tuition_district} onChange={handleChange} required />
 
-                {/* Preferred Tuition Area & Tutor Location in one row */}
+
                 <div className="tuition-location-container">
                   <div>
                     <label>Preferred Tuition Area</label>
